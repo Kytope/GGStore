@@ -1,72 +1,72 @@
-// Función para validar el formulario
 function validateForm() {
     const name = document.getElementById("name").value;
     const rut = document.getElementById("rut").value;
     const address = document.getElementById("address").value;
     const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
     const subject = document.getElementById("subject").value;
     const agree = document.getElementById("agree").checked;
-    const hashedPassword = hashPassword(password);
-    const hashedConfirmPassword = hashPassword(password);
-  
-    
-    document.getElementById("password").value = hashedPassword;
-    document.getElementById("confirm_password").value = hashedConfirmPassword;
-    
   
     const errors = {
-        name: "",
-        rut: "",
-        address: "",
-        email: "",
-        password: "",
-        subject: "",
-        agree: ""
+      name: "",
+      rut: "",
+      address: "",
+      email: "",
+      password: "",
+      subject: "",
+      agree: "",
     };
   
     let isValid = true;
   
-    // Validaciones individuales
+    // Validations
     if (name === "" || /\d/.test(name)) {
-        errors.name = "Ingrese su nombre";
-        isValid = false;
+      errors.name = "Ingrese su nombre";
+      isValid = false;
     }
   
     if (rut === "") {
-        errors.rut = "Ingrese un rut";
-        isValid = false;
+      errors.rut = "Ingrese un rut";
+      isValid = false;
     }
   
     if (address === "") {
-        errors.address = "Ingrese un nombre de usuario";
-        isValid = false;
+      errors.address = "Ingrese una dirección"; // Or a more specific validation
+      isValid = false;
     }
   
-    const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (email === "" || !emailRegex.test(email)) {
       errors.email = "Ingrese un email válido";
       isValid = false;
     }
   
     if (password === "" || password.length < 8) {
-        errors.password = "Ingrese una contraseña de al menos 8 caracteres";
-        isValid = false;
+      errors.password = "Ingrese una contraseña de al menos 8 caracteres";
+      isValid = false;
     }
   
     if (subject === "") {
-        errors.subject = "Por favor seleccione su país";
-        isValid = false;
+      errors.subject = "Por favor seleccione su país";
+      isValid = false;
     }
   
     if (!agree) {
-        errors.agree = "Confirme la veracidad de la información ingresada";
-        isValid = false;
+      errors.agree = "Confirme la veracidad de la información ingresada";
+      isValid = false;
     }
   
-    // Mostrar mensajes de error
+    // Show error messages
     for (const field in errors) {
-        const errorElement = document.getElementById(`${field}-error`);
-        errorElement.textContent = errors[field];
+      const errorElement = document.getElementById(`${field}-error`);
+      errorElement.textContent = errors[field];
+    }
+  
+    // Hash password only if form is valid
+    if (isValid) {
+      const password = document.getElementById("password").value;
+      const hashedPassword = hashPassword(password);
+      document.getElementById("password").value = hashedPassword;
     }
   
     return isValid;
