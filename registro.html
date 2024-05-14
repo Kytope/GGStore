@@ -4,19 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Validation</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
     <link rel="stylesheet" href="static\css\registro.css">
-    <script src="static\js\registro.js"></script>
 </head>
 <body>
     <div class="container">
-
-        <a href="index.html">
-            <img src="static/img/LogoGG.png" alt="Logo de la empresa" id="logo" width="42">
-        </a>
-        
         <h1>Registro de usuario</h1>
-        <form name="RegForm" onsubmit="return validateForm()" class="login-form" method="GET">
+        <form name="RegForm" onsubmit="return validateForm()" class="login-form">
             <div class="form-group">
                 <label for="name">Nombre Completo <span class="required">*</span>:</label>
                 <input type="text" id="name" name="Name" placeholder="Ingrese su nombre completo" required>
@@ -65,10 +58,12 @@
                 <span id="agree-error" class="error-message"></span>
             </div>
             <div class="form-group buttons-group">
-                <input type="submit" value="Enviar" name="Submit" class="submit-button">
+                <input type="submit" value="Registrarse" name="Submit" class="submit-button">
                 <input type="reset" value="Resetear" name="Reset" class="reset-button">
             </div>
         </form>
     </div>
+    <script src="static\js\registro.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
 </body>
 </html>
