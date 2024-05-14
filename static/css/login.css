@@ -13,6 +13,10 @@ body {
     height: 100vh; /* Asegura que el fondo cubra toda la ventana visible */
 }
 
+#logo-container {
+    text-align: center;
+    margin-bottom: 20px; /* Espacio entre el logo y el formulario */
+}
 
 /* Estilo del contenedor del formulario */
 .container {
