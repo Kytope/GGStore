@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <!-- Agrega tus enlaces a las hojas de estilo y otros recursos aquí -->
+</head>
+<body>
+    <div class="container">
+         <form action="">
+            <div class="row">
+                <div class="column">
+                    <h3 class="tittle">Checkout de compra</h3>
+                    <div class="input-box">
+                        <span>Nombre Completo:</span>
+                        <input type="text"
+                        placeholder="Cristopher Rojas">
+                    </div>
+                    <div class="input-box">
+                        <span>Email:</span>
+                        <input type="text"
+                        placeholder="example@example.com">
+                    </div>
+                    <div class="input-box">
+                        <span>Dirreccion:</span>
+                        <input type="text"
+                        placeholder="Calle - Comuna">
+                    </div>
+                    <div class="input-box">
+                        <span>Ciudad:</span>
+                        <input type="text"
+                        placeholder="Santiago">
+                    </div>                                        
+                </div>
+            </div>
+         </form>
+    </div>
+
+<div>
+    <h2>Resumen de compra</h2>
+    <p>Producto: Berserk Deluxe</p>
+    <!-- Aquí puedes mostrar otros detalles de la compra -->
+    <p>Precio: <span id="product-price"></span></p>
+</div>
+
+<!-- Puedes agregar más elementos HTML aquí según sea necesario -->
+
+<script>
+    // Recuperar el precio del producto del almacenamiento local
+    var price = localStorage.getItem("productPrice");
+
+    // Mostrar el precio en la página de checkout
+    document.getElementById("product-price").innerText = price;
+</script>
+
+</body>
+</html>

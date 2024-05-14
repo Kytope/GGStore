@@ -1,0 +1,74 @@
+/* Estilo para el encabezado */
+header {
+    background-color: #333533;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo para el h1 en el encabezado */
+header h1 {
+    margin: 10px; /* Elimina el margen predeterminado del h1 */
+}
+
+/* Estilo para los botones del encabezado */
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header-buttons a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6930c3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.header-buttons a:hover {
+    background-color: #333533;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Estilo para el footer */
+.footer {
+    background-color: #333533;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px; /* Esto separará el footer del contenido */
+}
+
+/* Estilo para el contenido del footer */
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo para el texto de copyright */
+.copyright {
+    flex: 1;
+}
+
+/* Estilo para la información de contacto */
+.contact-info {
+    flex: 2;
+    text-align: center;
+}
+
+/* Estilo para los enlaces de redes sociales */
+.social-media {
+    flex: 1;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto; /* Esto centrará el contenedor */
+}

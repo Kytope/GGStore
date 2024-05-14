@@ -1,0 +1,409 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para el encabezado */
+header {
+    background-color: #333533;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo para el h1 en el encabezado */
+header h1 {
+    margin: 10px; /* Elimina el margen predeterminado del h1 */
+}
+
+/* Estilo para los botones del encabezado */
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header-buttons a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6930c3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.header-buttons a:hover {
+    background-color: #333533;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.add-to-cart {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: #6930c3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #333533;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.centered-title {
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+/* Estilo para el contenedor de servicios */
+.services {
+    background-color: #f0f0f0; /* Fondo gris */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo para el contenedor de los servicios */
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas con igual anchura */
+    grid-gap: 10px; /* Espacio entre los servicios, tanto entre filas como entre columnas */
+    justify-items: center; /* Centrar horizontalmente */
+    margin: 0 auto; /* Centrar horizontalmente el contenedor de servicios */
+  }
+
+/* Estilo para cada servicio */
+.service {
+    background-color: #ffffff; /* Fondo blanco para cada servicio */
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s; /* Animación de transformación al pasar el mouse */
+    width: 300px; /* Ancho fijo para cada servicio */
+    height: 300px; /* Altura fija para cada servicio */
+    margin: 5px; /* Espacio horizontal entre los servicios */
+    border: 2px solid #000; /* Borde negro */
+}
+
+/* Cambio de estilo al pasar el mouse para cada servicio */
+.service:hover {
+    transform: scale(1.1); /* Hacer un pequeño zoom al pasar el mouse */
+}
+
+.service:hover .service-title {
+    font-size: 24px; /* Agrandar el tamaño del título */
+    color: #6930c3; /* Cambiar el color del título a naranja */
+    transition: font-size 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+}
+
+.service img {
+    width: 112px; /* Ancho deseado */
+    height: 112px; /* Alto deseado */
+    object-fit: cover; /* Para asegurar que la imagen cubra el área especificada */
+}
+
+/* Estilo para el footer */
+.footer {
+    background-color: #333533;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+}
+
+/* Estilo para el contenido del footer */
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo para el texto de copyright */
+.copyright {
+    flex: 1;
+}
+
+/* Estilo para la información de contacto */
+.contact-info {
+    flex: 2;
+    text-align: center;
+}
+
+/* Estilo para los enlaces de redes sociales */
+.social-media {
+    flex: 1;
+}
+
+.social-link {
+    display: inline-block;
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Estilo para el botón */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6930c3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+.cta-button:hover {
+    background-color: #333533; /* Cambia a color rosado al pasar el mouse */
+    transform: scale(1.05); /* Hacer un pequeño zoom al pasar el mouse */
+    transition: transform 0.3s ease; /* Transición suave de la propiedad de transformación */
+}
+
+.checkout {
+    display: inline-block;
+    background-color: #6930c3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+.checkout:hover {
+    background-color: #333533; /* Cambia a color rosado al pasar el mouse */
+    transform: scale(1.05); /* Hacer un pequeño zoom al pasar el mouse */
+    transition: transform 0.3s ease; /* Transición suave de la propiedad de transformación */
+}
+.sidebar {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #333533;
+    overflow-x: hidden;
+    transition: 0.5s;
+    border-right: 2px solid #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Efecto de sombra */
+    font-family: Georgia, serif; /* Cambiar la fuente */
+    color: #fff; /* Color del texto */
+}
+
+.sidebar.active {
+    width: auto; /* Ancho reactivo */
+    max-width: 80%; /* Ancho máximo para evitar que ocupe todo el espacio */
+}
+
+.sidebar-content {
+    width: 100%;
+    padding-bottom: 60px; /* Espacio para el footer */
+}
+
+.sidebar-header {
+    background-color: #000;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.sidebar-header h2 {
+    color: #fff;
+}
+
+.sidebar-footer {
+    background-color: #000;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-footer button {
+    color: #fff;
+}
+
+.sidebar-footer a {
+    margin-left: 10px;
+}
+   
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+  }
+
+  /* Columns */
+.left-column {
+    width: 65%;
+    position: relative;
+  }
+   
+  .right-column {
+    width: 35%;
+    margin-top: 60px;
+  }
+
+  /* Product Description */
+.product-description {
+    border-bottom: 1px solid #E1E8EE;
+    margin-bottom: 20px;
+  }
+  .product-description span {
+    font-size: 12px;
+    color: #358ED7;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .product-description h1 {
+    font-weight: 300;
+    font-size: 52px;
+    color: #43484D;
+    letter-spacing: -2px;
+  }
+  .product-description p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #86939E;
+    line-height: 24px;
+  }
+
+  /* Cable Configuration */
+.cable-choose {
+    margin-bottom: 20px;
+  }
+   
+  .cable-choose button {
+    border: 2px solid #E1E8EE;
+    border-radius: 6px;
+    padding: 13px 20px;
+    font-size: 14px;
+    color: #5E6977;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all .5s;
+  }
+   
+  .cable-choose button:hover,
+  .cable-choose button:active,
+  .cable-choose button:focus {
+    border: 2px solid #86939E;
+    outline: none;
+  }
+   
+  .cable-config {
+    border-bottom: 1px solid #E1E8EE;
+    margin-bottom: 20px;
+  }
+   
+  .cable-config a {
+    color: #358ED7;
+    text-decoration: none;
+    font-size: 12px;
+    position: relative;
+    margin: 10px 0;
+    display: inline-block;
+  }
+   
+  .cable-config a:before {
+    content: "?";
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 2px solid rgba(53, 142, 215, 0.5);
+    display: inline-block;
+    text-align: center;
+    line-height: 16px;
+    opacity: 0.5;
+    margin-right: 5px;
+  }
+
+  /* Product Price */
+.product-price {
+    display: flex;
+    align-items: center;
+  }
+   
+  .product-price span {
+    font-size: 26px;
+    font-weight: 300;
+    color: #43474D;
+    margin-right: 20px;
+  }
+   
+  .cart-btn {
+    display: inline-block;
+    background-color: #7DC855;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 12px 30px;
+    transition: all .5s;
+  }
+  .cart-btn:hover {
+    background-color: #64af3d;
+  }
+
+  /* Responsive */
+@media (max-width: 940px) {
+    .container {
+      flex-direction: column;
+      margin-top: 60px;
+    }
+   
+    .left-column,
+    .right-column {
+      width: 100%;
+    }
+   
+    .left-column img {
+      width: 300px;
+      right: 0;
+      top: -65px;
+      left: initial;
+    }
+  }
+   
+  @media (max-width: 535px) {
+    .left-column img {
+      width: 220px;
+      top: -85px;
+    }
+  }
+  
+          /* Estilos para la capa de fondo oscuro semi-transparente */
+          .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+            z-index: 1000; /* Asegura que esté sobre todo */
+            display: none; /* Oculta inicialmente la capa */
+        }
+        
+        /* Estilos para la vista emergente */
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            z-index: 1001; /* Asegura que esté sobre la capa de fondo */
+            display: none; /* Oculta inicialmente la vista emergente */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+        }

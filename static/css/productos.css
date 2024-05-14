@@ -1,0 +1,258 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para el encabezado */
+header {
+    background-color: #333533;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo para el h1 en el encabezado */
+header h1 {
+    margin: 10px; /* Elimina el margen predeterminado del h1 */
+}
+
+/* Estilo para los botones del encabezado */
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header-buttons a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6930c3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.header-buttons a:hover {
+    background-color: #333533;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.add-to-cart {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: #6930c3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #333533;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.centered-title {
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+/* Estilo para el contenedor de servicios */
+.services {
+    background-color: #f0f0f0; /* Fondo gris */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo para el contenedor de los servicios */
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas con igual anchura */
+    grid-gap: 10px; /* Espacio entre los servicios, tanto entre filas como entre columnas */
+    justify-items: center; /* Centrar horizontalmente */
+    margin: 0 auto; /* Centrar horizontalmente el contenedor de servicios */
+  }
+
+/* Estilo para cada servicio */
+.service {
+    background-color: #ffffff; /* Fondo blanco para cada servicio */
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s; /* Animación de transformación al pasar el mouse */
+    width: 300px; /* Ancho fijo para cada servicio */
+    height: 300px; /* Altura fija para cada servicio */
+    margin: 5px; /* Espacio horizontal entre los servicios */
+    border: 2px solid #000; /* Borde negro */
+}
+
+/* Cambio de estilo al pasar el mouse para cada servicio */
+.service:hover {
+    transform: scale(1.1); /* Hacer un pequeño zoom al pasar el mouse */
+}
+
+.service:hover .service-title {
+    font-size: 24px; /* Agrandar el tamaño del título */
+    color: #6930c3; /* Cambiar el color del título a naranja */
+    transition: font-size 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+}
+
+.service img {
+    width: 112px; /* Ancho deseado */
+    height: 112px; /* Alto deseado */
+    object-fit: cover; /* Para asegurar que la imagen cubra el área especificada */
+}
+
+/* Estilo para el footer */
+.footer {
+    background-color: #333533;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Estilo para el contenido del footer */
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo para el texto de copyright */
+.copyright {
+    flex: 1;
+}
+
+/* Estilo para la información de contacto */
+.contact-info {
+    flex: 2;
+    text-align: center;
+}
+
+/* Estilo para los enlaces de redes sociales */
+.social-media {
+    flex: 1;
+}
+
+.social-link {
+    display: inline-block;
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Estilo para el botón */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6930c3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+.cta-button:hover {
+    background-color: #333533; /* Cambia a color rosado al pasar el mouse */
+    transform: scale(1.05); /* Hacer un pequeño zoom al pasar el mouse */
+    transition: transform 0.3s ease; /* Transición suave de la propiedad de transformación */
+}
+
+.checkout {
+    display: inline-block;
+    background-color: #6930c3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+.checkout:hover {
+    background-color: #333533; /* Cambia a color rosado al pasar el mouse */
+    transform: scale(1.05); /* Hacer un pequeño zoom al pasar el mouse */
+    transition: transform 0.3s ease; /* Transición suave de la propiedad de transformación */
+}
+.sidebar {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #333533;
+    overflow-x: hidden;
+    transition: 0.5s;
+    border-right: 2px solid #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Efecto de sombra */
+    font-family: Georgia, serif; /* Cambiar la fuente */
+    color: #fff; /* Color del texto */
+}
+
+.sidebar.active {
+    width: auto; /* Ancho reactivo */
+    max-width: 80%; /* Ancho máximo para evitar que ocupe todo el espacio */
+}
+
+.sidebar-content {
+    width: 100%;
+    padding-bottom: 60px; /* Espacio para el footer */
+}
+
+.sidebar-header {
+    background-color: #000;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.sidebar-header h2 {
+    color: #fff;
+}
+
+.sidebar-footer {
+    background-color: #000;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-footer button {
+    color: #fff;
+}
+
+.sidebar-footer a {
+    margin-left: 10px;
+}
+
+.product-item {
+    color: #fff; /* Color del texto de los productos */
+    border-bottom: 1px solid #fff; /* Línea divisoria */
+    padding: 10px; /* Espaciado */
+}
+
+.closebtn {
+    position: absolute; /* Absolute positioning for top right corner */
+    top: 10px; /* Adjust top position as needed */
+    right: 10px; /* Set right position instead of left */
+    color: white; /* Set text color to white */
+    font-size: 30px; /* Adjust font size as needed */
+    font-weight: bold; /* Increase boldness for better visibility */
+    text-decoration: none; /* Remove underline */
+    transition: 0.3s; /* Add a smooth transition effect */
+  }
+  
+  .closebtn:hover {
+    opacity: 0.7; /* Change opacity on hover for visual feedback */
+  }
+
+  #clear-cart img {
+    filter: invert(100%) brightness(200%); /* Invert colors and increase brightness */
+  }

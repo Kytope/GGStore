@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <link rel="stylesheet" href="..\static\css\registro.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de usuario</h1>
+        <form name="RegForm" onsubmit="return validateForm()" class="login-form" method="GET">
+            <div class="form-group">
+                <label for="name">Nombre Completo <span class="required">*</span>:</label>
+                <input type="text" id="name" name="Name" placeholder="Ingrese su nombre completo" required>
+                <span id="name-error" class="error-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="rut">RUT <span class="required">*</span>:</label>
+                <input name="rut" id="rut" type="text" class="input-validate-rut" placeholder="Ingrese un RUT" onkeypress="return isNumber(event)" oninput="checkRut(this)" required>
+                <span id="rut-error" class="error-message"></span>
+                <span id="rut-message" class="error-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="address">Nombre de Usuario <span class="required">*</span>:</label>
+                <input type="text" id="address" name="Address" placeholder="Ingrese su nombre de usuario" required>
+                <span id="address-error" class="error-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail <span class="required">*</span>:</label>
+                <input type="email" id="email" name="EMail" placeholder="Ingrese su email" required>
+                <span id="email-error" class="error-message"></span>
+            </div>
+            <div class="form-group password-group">
+                <div>
+                    <label for="password">Contraseña <span class="required">*</span>:</label>
+                    <input type="password" id="password" name="Password" placeholder="Ingrese contraseña" required>
+                    <span id="password-error" class="error-message"></span>
+                </div>
+                <div>
+                    <label for="confirm_password">Confirmar Contraseña <span class="required">*</span>:</label>
+                    <input id="confirm_password" type="password" name="confirm_password" placeholder="Confirme contraseña" onkeyup="validate_password()" required>
+                    <span id="wrong_password_alert" class="error-message"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="subject">País:</label>
+                <select id="subject" name="Subject">
+                    <option value="">Seleccione país</option>
+                </select>
+                <span id="subject-error" class="error-message"></span>
+            </div>
+            <div class="form-group">
+                <div class="agree-container">
+                    <input type="checkbox" id="agree" name="Agree" class="agree-checkbox">
+                    <label for="agree" class="agree-label">Estoy de acuerdo con los términos y servicios</label>
+                </div>
+                <span id="agree-error" class="error-message"></span>
+            </div>
+            <div class="form-group buttons-group">
+                <input type="submit" value="Enviar" name="Submit" class="submit-button">
+                <input type="reset" value="Resetear" name="Reset" class="reset-button">
+            </div>
+        </form>
+    </div>
+    <script src="..\static\js\registro.js"></script>
+</body>
+</html>
