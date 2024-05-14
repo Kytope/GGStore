@@ -67,6 +67,10 @@ function validateForm() {
       const password = document.getElementById("password").value;
       const hashedPassword = hashPassword(password);
       document.getElementById("password").value = hashedPassword;
+
+      const confirm_password = document.getElementById("confirm_password").value;
+      const hashedConfirm_password= hashPassword(confirm_password);
+      document.getElementById("confirm_password").value = hashedConfirm_password;
     }
   
     return isValid;
