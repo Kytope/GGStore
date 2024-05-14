@@ -26,52 +26,85 @@
           </div>
             <div class="col-md-7 col-lg-8">
               <h4 class="mb-3">Datos del Producto</h4>
-              <form class="needs-validation" novalidate="">
+              <form id="productForm" class="needs-validation" novalidate="">
                 <div class="row g-3">
                   <div class="col-sm-6">
-                    <label for="firstName" class="form-label">Descripcion del producto</label>
-                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                    <label for="productName" class="form-label">Nombre del producto</label>
+                    <input type="text" class="form-control" id="productName" placeholder="" value="" required>
                     <div class="invalid-feedback">
-                      Descripcion no valida.
+                      Por favor ingresa el nombre del producto.
                     </div>
                   </div>
-      
+
+                  <div class="col-12">
+                    <label for="productType" class="form-label">Tipo de Venta</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="saleType" id="onlineSale" value="online" required>
+                      <label class="form-check-label" for="onlineSale">
+                        Online
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="saleType" id="storeSale" value="store" required>
+                      <label class="form-check-label" for="storeSale">
+                        Sucursal
+                      </label>
+                    </div>
+                    <div class="invalid-feedback">
+                      Por favor selecciona el tipo de venta.
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="productDescription" class="form-label">Descripción del producto</label>
+                    <textarea class="form-control" id="productDescription" rows="3" required></textarea>
+                    <div class="invalid-feedback">
+                      Por favor ingresa la descripción del producto.
+                    </div>
+                  </div>
+
                   <div class="col-12">
                     <label for="email" class="form-label">Cargar Foto del Producto</label>
                     <div class="input-group mb-3">
                         <label class="input-group-text" for="inputGroupFile01">Subir</label>
-                        <input type="file" class="form-control" id="inputGroupFile01">
+                        <input type="file" class="form-control" id="inputGroupFile01" required>
+                        <div class="invalid-feedback">
+                          Por favor selecciona una foto del producto.
+                        </div>
                       </div>
                   </div>
           
                   <div class="col-12">
                     <label for="address" class="form-label">Costo del Producto</label>
-                    <input type="text" class="form-control" id="address" placeholder="19990" required="">
+                    <input type="text" class="form-control" id="address" placeholder="19990" required>
                     <div class="invalid-feedback">
-                      Ingresa costo del producto correctamente.
+                      Por favor ingresa el costo del producto.
                     </div>
                   </div>
       
                   <div class="col-12">
                     <label for="address2" class="form-label">Stock <span class="text-muted">(Importante)</span></label>
-                    <input type="text" class="form-control" id="address2" placeholder="">
+                    <input type="text" class="form-control" id="address2" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Por favor ingresa el stock del producto.
+                    </div>
                   </div>
       
                   <div class="col-md-5">
-                    <label for="country" class="form-label">Categoria</label>
-                    <select class="form-select" id="country" required="">
+                    <label for="country" class="form-label">Categoría</label>
+                    <select class="form-select" id="country" required>
                       <option value="">Elije...</option>
                       <option>Figura</option>
                       <option>Manga</option>
                       <option>Peluche</option>
                     </select>
                     <div class="invalid-feedback">
-                      Ingresa una categoria valida.
+                      Por favor selecciona la categoría del producto.
                     </div>
                   </div>    
                   </div>
                 </div>    
-                <button class="w-40 btn btn-primary btn-lg" type="submit" style="margin-top: 20px;">Agregar Producto</button>
+                <button id="submitBtn" class="w-40 btn btn-primary btn-lg" type="submit" style="margin-top: 20px;">Agregar Producto</button>
               </form>
             </div>
           </div>
@@ -95,5 +128,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static\js\ingreso_producto.js"></script>
 </body>
 </html>
